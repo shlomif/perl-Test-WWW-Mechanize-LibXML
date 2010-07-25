@@ -6,8 +6,11 @@ WriteMakefile
           'VERSION_FROM' => 'lib/Test/WWW/Mechanize/LibXML.pm',
           'PREREQ_PM' => {
                            'HTML::TreeBuilder::LibXML' => 0,
+                           'MRO::Compat' => 0,
                            'Test::More' => 0,
-                           'Test::WWW::Mechanize' => 0
+                           'Test::WWW::Mechanize' => 0,
+                           'strict' => 0,
+                           'warnings' => 0
                          },
           'INSTALLDIRS' => 'site',
           'EXE_FILES' => [],

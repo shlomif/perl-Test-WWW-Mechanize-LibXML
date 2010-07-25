@@ -15,10 +15,14 @@ name: Test-WWW-Mechanize-LibXML
 provides:
   Test::WWW::Mechanize::LibXML:
     file: lib/Test/WWW/Mechanize/LibXML.pm
-    version: v0.0.1
+    version: v0.0.2
 requires:
   HTML::TreeBuilder::LibXML: 0
+  MRO::Compat: 0
+  Test::More: 0
   Test::WWW::Mechanize: 0
+  strict: 0
+  warnings: 0
 resources:
   license: http://www.opensource.org/licenses/mit-license.php
-version: v0.0.1
+version: v0.0.2
