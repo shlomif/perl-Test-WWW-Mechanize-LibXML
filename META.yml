@@ -1,12 +1,13 @@
 ---
-abstract: "use HTML::TreeBuilder::LibXML for testing\nweb-sites."
+abstract: 'use HTML::TreeBuilder::LibXML for testing'
 author:
   - 'Shlomi Fish <shlomif@insurgentsoftware.com>'
 build_requires:
   Test::More: 0
 configure_requires:
-  Module::Build: 0.36
-generated_by: 'Module::Build version 0.3607'
+  Module::Build: 0.40
+dynamic_config: 1
+generated_by: 'Module::Build version 0.4007, CPAN::Meta::Converter version 2.132830'
 license: mit
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
