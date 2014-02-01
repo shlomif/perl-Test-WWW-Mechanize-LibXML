@@ -81,7 +81,7 @@ sub _update_page
 
 =head2 my $tag = $mech->contains_tag($tag_spec, $blurb)
 
-See if the tree contains a tag using C< look_down(@$tag_spec) > and 
+See if the tree contains a tag using C< look_down(@$tag_spec) > and
 returns it.
 
 =cut
@@ -170,7 +170,7 @@ be added as needed.
 
 =head1 COPYRIGHT & LICENSE
 
-Copyright 2010 Shlomi Fish. (C<shlomif@insurgentsoftware.com>, 
+Copyright 2010 Shlomi Fish. (C<shlomif@insurgentsoftware.com>,
 L<http://www.shlomifish.org/> )
 
 This program is distributed under the MIT (X11) License:

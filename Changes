@@ -1,13 +1,14 @@
 Revision history for Test-WWW-Mechanize-LibXML
 
-0.0.3
+0.0.3   2014-02-01
         - Convert Build.PL to Test::Run::Builder.
         - Add the LICENSE file (CPANTS).
         - Minimum version of perl (CPANTS).
+        - Add t/cpan-changes.t and t/style-trailing-space.t .
 
-0.0.2   Sun Jul 25 09:07:11 IDT 2010
+0.0.2   2010-07-25
         - Add missing requires (including MRO::Compat). Thanks to the
         CPAN testers reports.
 
-0.0.1   Fri Jul 23 12:50:05 IDT 2010
+0.0.1   2010-07-23
         First version, released on an unsuspecting world.
