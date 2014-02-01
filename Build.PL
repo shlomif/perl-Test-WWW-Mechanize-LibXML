@@ -31,6 +31,13 @@ my $builder = Test::Run::Builder->new(
     },
     add_to_cleanup      => [ 'Test-WWW-Mechanize-LibXML-*' ],
     create_makefile_pl => 'traditional',
+    meta_merge =>
+    {
+        resources =>
+        {
+            repository => "https://github.com/shlomif/perl-Test-WWW-Mechanize-LibXML",
+        },
+    },
 );
 
 $builder->create_build_script();
