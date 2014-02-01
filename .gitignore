@@ -1,0 +1,9 @@
+Build
+Makefile.PL
+META.json
+META.yml
+MYMETA.json
+MYMETA.yml
+Test-WWW-Mechanize-LibXML-v*
+_build
+blib
