@@ -12,7 +12,7 @@ web-sites.
 
 =head1 VERSION
 
-Version 0.0.2
+Version 0.0.3
 
 =head1 SYNOPSIS
 
@@ -34,7 +34,7 @@ queries on the tree.
 
 =cut
 
-our $VERSION = '0.0.2';
+our $VERSION = '0.0.3';
 
 use base 'Test::WWW::Mechanize';
 
