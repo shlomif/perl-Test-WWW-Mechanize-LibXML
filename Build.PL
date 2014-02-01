@@ -26,6 +26,7 @@ my $builder = Test::Run::Builder->new(
         'Test::WWW::Mechanize' => 0,
         'strict' => 0,
         'warnings' => 0,
+        'perl' => '5.008',
         'Test::More' => 0,
     },
     add_to_cleanup      => [ 'Test-WWW-Mechanize-LibXML-*' ],

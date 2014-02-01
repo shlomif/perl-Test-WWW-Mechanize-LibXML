@@ -3,6 +3,8 @@ package Test::WWW::Mechanize::LibXML;
 use warnings;
 use strict;
 
+use 5.008;
+
 =head1 NAME
 
 Test::WWW::Mechanize::LibXML - use HTML::TreeBuilder::LibXML for testing
