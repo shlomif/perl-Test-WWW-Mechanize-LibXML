@@ -11,6 +11,10 @@ my $builder = Test::Run::Builder->new(
     license             => 'mit',
     dist_author         => q{Shlomi Fish <shlomif@insurgentsoftware.com>},
     dist_version_from   => 'lib/Test/WWW/Mechanize/LibXML.pm',
+    configure_requires =>
+    {
+        'Module::Build' => '0.36',
+    },
     build_requires =>
     {
         'Test::More' => 0,
