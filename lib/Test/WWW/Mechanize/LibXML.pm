@@ -10,10 +10,6 @@ use 5.008;
 Test::WWW::Mechanize::LibXML - use HTML::TreeBuilder::LibXML for testing
 web-sites.
 
-=head1 VERSION
-
-Version 0.0.4
-
 =head1 SYNOPSIS
 
     use Test::WWW::Mechanize::LibXML;
@@ -34,9 +30,7 @@ queries on the tree.
 
 =cut
 
-our $VERSION = '0.0.4';
-
-use base 'Test::WWW::Mechanize';
+use parent 'Test::WWW::Mechanize';
 
 use HTML::TreeBuilder::LibXML;
 
