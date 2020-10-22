@@ -3,7 +3,7 @@ package Test::WWW::Mechanize::LibXML;
 use warnings;
 use strict;
 
-use 5.008;
+use 5.014;
 
 =head1 NAME
 
@@ -32,7 +32,7 @@ queries on the tree.
 
 use parent 'Test::WWW::Mechanize';
 
-use HTML::TreeBuilder::LibXML;
+use HTML::TreeBuilder::LibXML ();
 
 use MRO::Compat;
 
@@ -65,7 +65,7 @@ sub _update_page
     my $ret = $self->maybe::next::method(@_);
 
     my $tree = HTML::TreeBuilder::LibXML->new;
-    $tree->parse($self->content());
+    $tree->parse( $self->content() );
     $tree->eof();
 
     $self->libxml_tree($tree);
@@ -84,13 +84,13 @@ sub contains_tag
 {
     local $Test::Builder::Level = $Test::Builder::Level + 1;
 
-    my $mech = shift;
+    my $mech     = shift;
     my $tag_spec = shift;
-    my $blurb = shift;
+    my $blurb    = shift;
 
     my $ret = $mech->libxml_tree->look_down(@$tag_spec);
 
-    ok($ret, $blurb);
+    ok( $ret, $blurb );
 
     return $ret;
 }
@@ -106,52 +106,18 @@ sub tree_matches_xpath
 {
     local $Test::Builder::Level = $Test::Builder::Level + 1;
 
-    my $mech = shift;
+    my $mech  = shift;
     my $xpath = shift;
     my $blurb = shift;
 
     my @nodes = $mech->libxml_tree->findnodes($xpath);
 
-    return ok(scalar(@nodes), $blurb);
+    return ok( scalar(@nodes), $blurb );
 }
 
 =head1 AUTHOR
 
 Shlomi Fish, C<< <shlomif at insurgentsoftware.com> >>
-
-=head1 BUGS
-
-Please report any bugs or feature requests to C<bug-test-www-mechanize-libxml at rt.cpan.org>, or through
-the web interface at L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Test-WWW-Mechanize-LibXML>.  I will be notified, and then you'll
-automatically be notified of progress on your bug as I make changes.
-
-=head1 SUPPORT
-
-You can find documentation for this module with the perldoc command.
-
-    perldoc Test::WWW::Mechanize::LibXML
-
-You can also look for information at:
-
-=over 4
-
-=item * RT: CPAN's request tracker
-
-L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=Test-WWW-Mechanize-LibXML>
-
-=item * AnnoCPAN: Annotated CPAN documentation
-
-L<http://annocpan.org/dist/Test-WWW-Mechanize-LibXML>
-
-=item * CPAN Ratings
-
-L<http://cpanratings.perl.org/d/Test-WWW-Mechanize-LibXML>
-
-=item * Search CPAN
-
-L<http://search.cpan.org/dist/Test-WWW-Mechanize-LibXML/>
-
-=back
 
 =head1 ACKNOWLEDGEMENTS
 
@@ -167,7 +133,7 @@ be added as needed.
 Copyright 2010 Shlomi Fish. (C<shlomif@insurgentsoftware.com>,
 L<http://www.shlomifish.org/> )
 
-This program is distributed under the MIT (X11) License:
+This program is distributed under the MIT (Expat) License:
 L<http://www.opensource.org/licenses/mit-license.php>
 
 Permission is hereby granted, free of charge, to any person
@@ -193,4 +159,4 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 =cut
 
-1; # End of Test::WWW::Mechanize::LibXML
+1;    # End of Test::WWW::Mechanize::LibXML
